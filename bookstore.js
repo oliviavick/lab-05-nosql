@@ -29,9 +29,11 @@ db.books.insertMany([
       author_ids: ["author_004"]
     },
     {
-      title: "Pride and Prejudice",
-      published_year: 1813,
-      author_ids: ["author_001"]
+        {
+            title: "Emma",
+            published_year: 1815,
+            author_ids: ["author_001"]
+          }
     }
   ]);
   
@@ -54,4 +56,3 @@ db.books.insertMany([
       $in: ["author_001", "author_004"]
     }
   }).forEach(printjson);
-  
